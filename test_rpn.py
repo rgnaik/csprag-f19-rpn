@@ -20,3 +20,6 @@ class TestBasics(unittest.TestCase):
     def test_badInput(self):
         with self. assertRaises(TypeError):
             rpn.calculate('1 2 3 +')
+
+if __name__ == '__main__':
+    unittest.main()

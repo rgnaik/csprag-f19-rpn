@@ -28,6 +28,10 @@ def calculate(string):
             arg1 = stack.pop()
             result = pow(arg1, arg2)
             stack.append(result)
+        elif token == 'x':
+            #not gonna get here
+            result = stack.pop()
+            result = result == stack.pop()
         else:
             stack.append((int(token)))
 
