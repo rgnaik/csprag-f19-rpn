@@ -3,7 +3,6 @@
 def calculate(string):
     stack = list()
     for token in string.split():
-        #print(token)
         if token == '+':
             arg2 = stack.pop()
             arg1 = stack.pop()
@@ -17,7 +16,6 @@ def calculate(string):
         else:
             stack.append((int(token)))
 
-    #print(stack)
     if (len(stack)) != 1:
         raise TypeError("Malformed input" + string)
     return stack.pop()
